@@ -38,8 +38,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: https://pavlinaps.github.io/fylo-data-storage-component-sass/
+- Solution URL: https://github.com/PavlinaPs/testimonials-grid-section
+- Live Site URL: https://pavlinaps.github.io/testimonials-grid-section
 
 ## My process
 
