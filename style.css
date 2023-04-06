@@ -1,0 +1,213 @@
+/*custom variables*/
+:root {
+  --ff: "Barlow Semi Condensed", sans-serif;
+
+  --fw-medium: 500;
+  --fw-semiBold: 600;
+
+  --fs-desktop: 1.3rem;
+  --fs-lead: 2rem;
+
+  --clr-moderate-violet: 263, 55%, 52%;
+  --clr-very-dark-grayish-blue: 217, 19%, 35%;
+  --clr-very-dark-blackish-blue: 219, 29%, 14%;
+  --clr-white: 0, 0%, 100%;
+  --clr-light-gray: 0, 0%, 81%;
+  --clr-light-grayish-blue: 210, 46%, 95%;
+}
+
+/* reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* set-up */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: var(--ff);
+  font-size: var(--fs-normal);
+  font-weight: var(--fw-regular);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 3rem;
+  row-gap: 2.4rem;
+  width: 37.5rem;
+  padding: 7rem 2.4rem 7rem 2.4rem;
+  background-color: hsl(var(--clr-light-grayish-blue));
+}
+
+@media (min-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 3rem;
+    row-gap: 2.4rem;
+    width: 144rem;
+    height: 90rem;
+    padding: 16.5rem;
+  }
+}
+
+.testimonial {
+  padding: 2.4rem 3.4rem 3rem 3.2rem;
+  border-radius: 1rem;
+}
+
+.testimonial--1 {
+  position: relative;
+  background-color: hsl(var(--clr-moderate-violet));
+}
+
+.testimonial--1::before {
+  content: url(/images/bg-pattern-quotation.svg);
+  position: absolute;
+  top: 0;
+  right: 2.5rem;
+}
+
+.testimonial--1 .lead {
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 1200px) {
+  .testimonial--1 {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 2;
+    position: relative;
+    background-color: hsl(var(--clr-moderate-violet));
+  }
+
+  .testimonial--1::before {
+    top: 0;
+    right: 8rem;
+  }
+}
+
+.testimonial--2 {
+  background-color: hsl(var(--clr-very-dark-grayish-blue));
+}
+
+.testimonial--3 {
+  background-color: hsl(var(--clr-white));
+}
+
+.testimonial--4 {
+  background-color: hsl(var(--clr-very-dark-blackish-blue));
+}
+
+.testimonial--5 {
+  background-color: hsl(var(--clr-white));
+}
+
+@media (min-width: 1200px) {
+  .testimonial--2 {
+    grid-row: 1 / span 1;
+    grid-column: 3 / span 1;
+    background-color: hsl(var(--clr-very-dark-grayish-blue));
+  }
+
+  .testimonial--3 {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+    background-color: hsl(var(--clr-white));
+  }
+
+  .testimonial--4 {
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 2;
+    background-color: hsl(var(--clr-very-dark-blackish-blue));
+  }
+
+  .testimonial--5 {
+    grid-row: 1 / span 2;
+    grid-column: 4 / span 1;
+    background-color: hsl(var(--clr-white));
+  }
+}
+
+.graduate {
+  display: flex;
+  gap: 1.3rem;
+}
+
+.graduate__image {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  border: 0.2rem solid hsla(var(--clr-white), 50%);
+}
+
+.graduate__info__name {
+  font-size: 1.3rem;
+  font-weight: var(--fw-medium);
+  color: hsla(var(--clr-white), 90%);
+  line-height: 1.3;
+}
+
+.graduate__info__title {
+  font-size: 1.1rem;
+  font-weight: var(--fw-medium);
+  color: hsla(var(--clr-white), 50%);
+}
+
+.lead {
+  margin-top: 1.6rem;
+  font-size: var(--fs-lead);
+  font-weight: var(--fw-semiBold);
+  color: hsla(var(--clr-white), 90%);
+  line-height: 1.2;
+}
+
+.text {
+  margin-top: 1.6rem;
+  font-size: var(--fs-desktop);
+  font-weight: var(--fw-medium);
+  color: hsla(var(--clr-white), 50%);
+  line-height: 1.4;
+}
+
+.text--dark70 {
+  color: hsla(var(--clr-very-dark-grayish-blue), 70%);
+}
+
+.text--dark50 {
+  color: hsla(var(--clr-very-dark-grayish-blue), 50%);
+}
+
+.text--dark {
+  color: hsl(var(--clr-very-dark-grayish-blue));
+}
+
+/* attribution */
+.attribution {
+  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  text-align: center;
+  color: var(--very-dark-blue);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: underline;
+}
